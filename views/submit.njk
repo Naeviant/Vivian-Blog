@@ -1,0 +1,22 @@
+{% extends './template.njk' %}
+{% block body %}
+<div class="container">
+    <h1 class="text-center">Create New Post</h1>
+    <div class="alert alert-warning" id="invalid" style="display: none;">Please Complete All Fields</div>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="title" placeholder="Post Title">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="summary" placeholder="Post Summary">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="body" rows="12" placeholder="Post Body (Supports Markdown)"></textarea>
+        </div>
+        <p class="text-right">
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </p>
+    </form>
+</div>
+<script src="/js/submit.js"></script>
+{% endblock %}

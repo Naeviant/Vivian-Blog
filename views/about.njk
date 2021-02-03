@@ -1,0 +1,8 @@
+{% extends './template.njk' %}
+{% block body %}
+<div class="container">
+    <h1 class="text-center">About Me</h1>
+    <hr />
+    <p>{% markdown %}{{ about }}{% endmarkdown %}</p>
+</div>
+{% endblock %}

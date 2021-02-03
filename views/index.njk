@@ -1,0 +1,20 @@
+{% extends './template.njk' %}
+{% block body %}
+<div style="background-image: url(/img/sunset.png); width: 100%; height: calc(100vh - 36px); margin-top: -20px; position: fixed;"></div>
+<div style="background-color: #000; width: 100%; height: calc(100vh - 36px); opacity: 0.8; margin-top: -20px; position: fixed;"></div>
+<div style="width: 100%; height: calc(100vh - 36px); margin-top: -20px; position: fixed;">
+    <div class="d-flex flex-row align-items-center" style="min-height: calc(100vh - 76px);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div id="landing-wrapper" class="col-md-12 text-center">
+                    <h1>{{ heading }}</h1>
+                    <p>{{ subheading }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% if not auth %}
+    <div style="width: 20px; height: 20px; position: fixed; right: 10px; bottom: 10px;"><a href="/login" id="landing-login"><i class="bi bi-pencil-fill"></i></a></div>
+{% endif %}
+{% endblock %}

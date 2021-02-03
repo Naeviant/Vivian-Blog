@@ -1,0 +1,19 @@
+h1 {
+    padding: 10px 0;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+#landing-wrapper, #landing-login {
+    color: #999;
+}
+
+#landing-wrapper h1 {
+    font-size: 48px;
+}
+
+#landing-wrapper p {
+    font-size: 30px;
+}

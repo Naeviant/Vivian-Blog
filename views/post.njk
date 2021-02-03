@@ -1,0 +1,15 @@
+{% extends './template.njk' %}
+{% block body %}
+<div class="container">
+    <h1 class="text-center">{{ post.title }}</h1>
+    <p class="text-center"><small>{{ post.timestamp | date }}</small></p>
+    {% if auth %}
+        <p class="text-center"><button type="button" class="btn btn-danger btn-sm" id="delete" data-post="{{ post.id }}">Delete</button></p>
+    {% endif %}
+    <hr />
+    <p>{% markdown %}{{ post.body }}{% endmarkdown %}</p>
+</div>
+{% if auth %}
+    <script src="/js/delete.js"></script>
+{% endif %}
+{% endblock %}

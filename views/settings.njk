@@ -1,0 +1,22 @@
+{% extends './template.njk' %}
+{% block body %}
+<div class="container">
+    <h1 class="text-center">Blog Settings</h1>
+    <div class="alert alert-warning" id="invalid" style="display: none;">Please Complete All Fields</div>
+    <form>
+        <div class="form-group">
+            <input type="text" class="form-control" id="heading" placeholder="Landing Page Heading" value="{{ heading }}">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" id="subheading" placeholder="Landing Page Subheading" value="{{ subheading }}">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" id="about" rows="12" placeholder="About Page Content (Supports Markdown)">{{ about }}</textarea>
+        </div>
+        <p class="text-right">
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+        </p>
+    </form>
+</div>
+<script src="/js/settings.js"></script>
+{% endblock %}
